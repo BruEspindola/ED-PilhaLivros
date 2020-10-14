@@ -24,7 +24,6 @@ public class Pilha {
 	public void pop() { // tira o ultimo inserido
 		topo = topo.getAnterior();
 		anterior = topo;
-
 	}
 
 	public boolean vazia() { // verifica se esta vazia
@@ -47,4 +46,36 @@ public class Pilha {
 		}
 	}
 
+	public Livro desempilha(int i) { //desempilha itens
+		Livro AUX = null;
+		if (vazia()) {
+			System.out.println("ERRO! Lista v�zia");
+		} else {
+			AUX = topo;
+			topo = topo.getAnterior();
+			System.out.println("\n" + AUX);
+			return AUX;
+		}
+		return AUX;
+	}
+
+
+	public Livro getTopo() {
+		return topo;
+	}
+
+	public void setTopo(Livro AUX) {
+		this.topo = AUX;
+	}
+
+	public void ReEmpilha(Livro livro) { // empilhar
+		if (anterior == null) {
+			anterior = livro;
+		} else {
+			topo = livro;
+			setTopo(livro);
+			anterior = topo;
+		}
+		tamanho++;
+	}
 }

@@ -11,6 +11,7 @@ public class Livro {
 		this.nome = nome;
 		this.ano = ano;
 		this.preco = preco;
+
 	}
 
 	public Livro getAnterior() {
@@ -23,6 +24,6 @@ public class Livro {
 
 	@Override
 	public String toString() {
-		return "Nome: " + nome + " Ano: " + ano + " Preço: " + preco;
+		return "Nome: " + nome + " Ano: " + ano + " Preï¿½o: " + preco;
 	}
 }
